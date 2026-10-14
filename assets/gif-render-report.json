@@ -1,0 +1,550 @@
+{
+  "resolution": [
+    640,
+    360
+  ],
+  "errors": [],
+  "publicMedia": "Original synthetic illustrations",
+  "items": [
+    {
+      "id": 1,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-01.gif",
+      "bytes": 316692
+    },
+    {
+      "id": 2,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-02.gif",
+      "bytes": 156645
+    },
+    {
+      "id": 3,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-03.gif",
+      "bytes": 226153
+    },
+    {
+      "id": 4,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-04.gif",
+      "bytes": 263100
+    },
+    {
+      "id": 5,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-05.gif",
+      "bytes": 153167
+    },
+    {
+      "id": 6,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-06.gif",
+      "bytes": 845331
+    },
+    {
+      "id": 7,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-07.gif",
+      "bytes": 325029
+    },
+    {
+      "id": 8,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-08.gif",
+      "bytes": 327351
+    },
+    {
+      "id": 9,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-09.gif",
+      "bytes": 173679
+    },
+    {
+      "id": 10,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-10.gif",
+      "bytes": 310580
+    },
+    {
+      "id": 11,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-11.gif",
+      "bytes": 419898
+    },
+    {
+      "id": 12,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-12.gif",
+      "bytes": 348481
+    },
+    {
+      "id": 13,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-13.gif",
+      "bytes": 204870
+    },
+    {
+      "id": 14,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-14.gif",
+      "bytes": 256474
+    },
+    {
+      "id": 15,
+      "theme": "blue",
+      "frames": 65,
+      "fps": 10,
+      "duration": 6.5,
+      "name": "blue-15.gif",
+      "bytes": 620903
+    },
+    {
+      "id": 16,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-16.gif",
+      "bytes": 325399
+    },
+    {
+      "id": 17,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-17.gif",
+      "bytes": 4809525
+    },
+    {
+      "id": 18,
+      "theme": "blue",
+      "frames": 80,
+      "fps": 10,
+      "duration": 8,
+      "name": "blue-18.gif",
+      "bytes": 2079441
+    },
+    {
+      "id": 19,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-19.gif",
+      "bytes": 201704
+    },
+    {
+      "id": 20,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-20.gif",
+      "bytes": 136580
+    },
+    {
+      "id": 21,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-21.gif",
+      "bytes": 66731
+    },
+    {
+      "id": 22,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-22.gif",
+      "bytes": 177099
+    },
+    {
+      "id": 23,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-23.gif",
+      "bytes": 119229
+    },
+    {
+      "id": 24,
+      "theme": "blue",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "blue-24.gif",
+      "bytes": 240408
+    },
+    {
+      "id": 25,
+      "theme": "blue",
+      "frames": 70,
+      "fps": 10,
+      "duration": 7,
+      "name": "blue-25.gif",
+      "bytes": 397121
+    },
+    {
+      "id": 26,
+      "theme": "blue",
+      "frames": 70,
+      "fps": 10,
+      "duration": 7,
+      "name": "blue-26.gif",
+      "bytes": 137526
+    },
+    {
+      "id": 27,
+      "theme": "blue",
+      "frames": 70,
+      "fps": 10,
+      "duration": 7,
+      "name": "blue-27.gif",
+      "bytes": 184570
+    },
+    {
+      "id": 28,
+      "theme": "blue",
+      "frames": 70,
+      "fps": 10,
+      "duration": 7,
+      "name": "blue-28.gif",
+      "bytes": 140139
+    },
+    {
+      "id": 29,
+      "theme": "blue",
+      "frames": 70,
+      "fps": 10,
+      "duration": 7,
+      "name": "blue-29.gif",
+      "bytes": 180059
+    },
+    {
+      "id": 30,
+      "theme": "blue",
+      "frames": 70,
+      "fps": 10,
+      "duration": 7,
+      "name": "blue-30.gif",
+      "bytes": 286874
+    },
+    {
+      "id": 1,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-01.gif",
+      "bytes": 395940
+    },
+    {
+      "id": 2,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-02.gif",
+      "bytes": 177451
+    },
+    {
+      "id": 3,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-03.gif",
+      "bytes": 307304
+    },
+    {
+      "id": 4,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-04.gif",
+      "bytes": 357292
+    },
+    {
+      "id": 5,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-05.gif",
+      "bytes": 154605
+    },
+    {
+      "id": 6,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-06.gif",
+      "bytes": 841954
+    },
+    {
+      "id": 7,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-07.gif",
+      "bytes": 300476
+    },
+    {
+      "id": 8,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-08.gif",
+      "bytes": 282555
+    },
+    {
+      "id": 9,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-09.gif",
+      "bytes": 168264
+    },
+    {
+      "id": 10,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-10.gif",
+      "bytes": 300298
+    },
+    {
+      "id": 11,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-11.gif",
+      "bytes": 505300
+    },
+    {
+      "id": 12,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-12.gif",
+      "bytes": 290888
+    },
+    {
+      "id": 13,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-13.gif",
+      "bytes": 237766
+    },
+    {
+      "id": 14,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-14.gif",
+      "bytes": 205018
+    },
+    {
+      "id": 15,
+      "theme": "teal",
+      "frames": 65,
+      "fps": 10,
+      "duration": 6.5,
+      "name": "teal-15.gif",
+      "bytes": 483105
+    },
+    {
+      "id": 16,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-16.gif",
+      "bytes": 294897
+    },
+    {
+      "id": 17,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-17.gif",
+      "bytes": 4790324
+    },
+    {
+      "id": 18,
+      "theme": "teal",
+      "frames": 80,
+      "fps": 10,
+      "duration": 8,
+      "name": "teal-18.gif",
+      "bytes": 2224761
+    },
+    {
+      "id": 19,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-19.gif",
+      "bytes": 188432
+    },
+    {
+      "id": 20,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-20.gif",
+      "bytes": 120909
+    },
+    {
+      "id": 21,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-21.gif",
+      "bytes": 68352
+    },
+    {
+      "id": 22,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-22.gif",
+      "bytes": 174202
+    },
+    {
+      "id": 23,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-23.gif",
+      "bytes": 102500
+    },
+    {
+      "id": 24,
+      "theme": "teal",
+      "frames": 60,
+      "fps": 10,
+      "duration": 6,
+      "name": "teal-24.gif",
+      "bytes": 252744
+    },
+    {
+      "id": 25,
+      "theme": "teal",
+      "frames": 70,
+      "fps": 10,
+      "duration": 7,
+      "name": "teal-25.gif",
+      "bytes": 493402
+    },
+    {
+      "id": 26,
+      "theme": "teal",
+      "frames": 70,
+      "fps": 10,
+      "duration": 7,
+      "name": "teal-26.gif",
+      "bytes": 131220
+    },
+    {
+      "id": 27,
+      "theme": "teal",
+      "frames": 70,
+      "fps": 10,
+      "duration": 7,
+      "name": "teal-27.gif",
+      "bytes": 191154
+    },
+    {
+      "id": 28,
+      "theme": "teal",
+      "frames": 70,
+      "fps": 10,
+      "duration": 7,
+      "name": "teal-28.gif",
+      "bytes": 124858
+    },
+    {
+      "id": 29,
+      "theme": "teal",
+      "frames": 70,
+      "fps": 10,
+      "duration": 7,
+      "name": "teal-29.gif",
+      "bytes": 159951
+    },
+    {
+      "id": 30,
+      "theme": "teal",
+      "frames": 70,
+      "fps": 10,
+      "duration": 7,
+      "name": "teal-30.gif",
+      "bytes": 278866
+    }
+  ]
+}

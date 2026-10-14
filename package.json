@@ -1,0 +1,20 @@
+{
+  "name": "cooper-video-editing-skill",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reusable Chinese talking-head editing system and 30 deterministic motion examples",
+  "scripts": {
+    "dev": "python3 -m http.server 8765 --directory docs",
+    "build:docs": "python3 scripts/build-docs.py",
+    "render:gifs": "node scripts/render-gifs.cjs",
+    "check": "python3 scripts/validate.py",
+    "test": "node scripts/qa.cjs",
+    "build:placeholders": "node scripts/build-placeholders.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cooper 剪辑包装"
+  short_description: "口播精剪、双主题包装、三十种动效与字幕素材规范，可跨 Agent 复用"
+  default_prompt: "用 $cooper-video-editing-skill 为我的口播选择并实现合适的剪辑包装。"

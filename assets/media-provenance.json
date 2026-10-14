@@ -1,0 +1,53 @@
+{
+  "scope": "Anonymous public media only; no user photographs, recordings, video frames, or extracted masks",
+  "files": [
+    {
+      "path": "docs/assets/media/oil.png",
+      "sha256": "e8d5726709e9415c348a1bf9bb4e08d94d6ee43ad286d5f1ddd63b73aaf2ec46",
+      "origin": "Original code-drawn synthetic illustration",
+      "source": "scripts/build-placeholders.cjs"
+    },
+    {
+      "path": "docs/assets/media/oil.svg",
+      "sha256": "9a2734602c5dba3a53a331853ec7ddb81d070ec5c5e421795e00cad813e702bb",
+      "origin": "Original code-drawn synthetic illustration",
+      "source": "scripts/build-placeholders.cjs"
+    },
+    {
+      "path": "docs/assets/media/person.png",
+      "sha256": "efa8c7e254f1035ff0dfca56111d3af9fca5ee6b3527e27672e2a43392ee1453",
+      "origin": "Original code-drawn synthetic illustration",
+      "source": "scripts/build-placeholders.cjs"
+    },
+    {
+      "path": "docs/assets/media/person.svg",
+      "sha256": "0ba141ea00159241e5a6a29fd24ceee02d8ccad73629456166a7abfb05e403af",
+      "origin": "Original code-drawn synthetic illustration",
+      "source": "scripts/build-placeholders.cjs"
+    },
+    {
+      "path": "docs/assets/media/screen.png",
+      "sha256": "7bb4b4a6977047d210f8e027d35f9ba6e34b6097b190e841fc46dbb0eabcaf92",
+      "origin": "Original code-drawn synthetic illustration",
+      "source": "scripts/build-placeholders.cjs"
+    },
+    {
+      "path": "docs/assets/media/screen.svg",
+      "sha256": "c10d5876fc5f7e4d1bb23861fbe844f23928d254f0af16779c90751540271413",
+      "origin": "Original code-drawn synthetic illustration",
+      "source": "scripts/build-placeholders.cjs"
+    },
+    {
+      "path": "docs/assets/media/wool.png",
+      "sha256": "2f20f413d913aff31f57ef6fc5d69359e816cdf0eafdf5f6d76d2e5064979950",
+      "origin": "Original code-drawn synthetic illustration",
+      "source": "scripts/build-placeholders.cjs"
+    },
+    {
+      "path": "docs/assets/media/wool.svg",
+      "sha256": "9a3be7800a2fd8b396aac20120faf5aa5eb071f49ce3a5265ac0a700021fc714",
+      "origin": "Original code-drawn synthetic illustration",
+      "source": "scripts/build-placeholders.cjs"
+    }
+  ]
+}

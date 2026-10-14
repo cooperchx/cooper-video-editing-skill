@@ -1,0 +1,61 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>runtimes</title><style>body{max-width:1160px;margin:auto;padding:32px 24px 80px;background:#f4f3ee;color:#132b59;font:16px/1.8 system-ui,sans-serif}a{color:#294acb;text-underline-offset:3px}h1{font-size:40px;line-height:1.25}h2{margin-top:64px;border-top:1px solid #bdcdf6;padding-top:28px}h3{margin-top:40px}p{max-width:1040px}img{display:block;width:100%;height:auto;border-radius:8px}table{width:100%;border-collapse:collapse;table-layout:fixed}td{vertical-align:top;padding:12px;border:1px solid #c8d1e2;overflow-wrap:anywhere}.table-wrap{overflow:auto}code{font:14px ui-monospace,monospace;background:#e8ebf1;padding:2px 5px}pre{padding:18px;overflow:auto;background:#e8ebf1;border-radius:8px}nav{position:sticky;top:0;background:#f4f3eef2;padding:12px 0;backdrop-filter:blur(10px)}@media(max-width:650px){body{padding:16px}h1{font-size:30px}td{padding:4px;font-size:12px}}</style><nav><a href="index.html">交互动效</a> · <a href="guide.html">完整 Skill 图鉴</a> · <a href="https://github.com/cooperchx/cooper-video-editing-skill">GitHub</a></nav><main><h1>代码复用与渲染器适配</h1>
+<h2>仓库里的真实实现</h2>
+<p><code>docs/app.js</code> 是 30 个场景的可运行 JavaScript 实现，<code>docs/style.css</code> 提供材质、层级与双主题，<code>assets/components.json</code> 是组件清单，<code>assets/tokens.json</code> 是设计参数。浏览器逻辑画布为 1600×900，导出制作默认映射到 1920×1080。</p>
+<p>当前公开示例全部为原创代码占位素材：匿名讲述者、虚构软件界面、两种纹理插画，不含用户照片、录屏或源视频帧。静态人物轮廓来自同一匿名绘图，只用于说明层级。网页展示构图和代码动画；它没有接入整段口播、连续抠像、音轨或 MP4 导出器。</p>
+<h2>本地运行与 GIF 重建</h2>
+<pre><code>
+npm ci
+
+npx playwright install chromium
+
+npm run build:placeholders # 可选：重建匿名占位素材
+
+npm run dev
+
+# 浏览器打开 http://localhost:8765
+
+npm run render:gifs
+
+npm run check
+
+npm test
+
+</code></pre>
+<p>依赖：Node 22+、Python 3、ffmpeg、Playwright Chromium。可设置 <code>CHROME_PATH</code> 使用本机兼容 Chromium。GIF 默认 640×360、10 fps、96 色，适合文档预览，不代表最终视频质量。</p>
+<pre><code>
+node scripts/render-gifs.cjs --themes=blue --ids=2,8,18,24 --width=640 --fps=10
+
+</code></pre>
+<p>执行后写入 <code>docs/assets/gifs/</code>，渲染记录写入 <code>assets/gif-render-report.json</code>。字体样张涉及单独授权文件，不能仅靠仓库中的开源替代自动重建商业字体样张。</p>
+<h2>浏览器逐帧接口</h2>
+<pre><code>
+await motionLibrary.ready;
+
+motionLibrary.setTheme(&#x27;blue&#x27;); // &#x27;teal&#x27; = 黑＋正绿
+
+motionLibrary.select(24, {autoplay: false});
+
+motionLibrary.configure({title: &#x27;风格\n怎么选？&#x27;, sub: &#x27;动画 / 漫剧&#x27;, lens: 18});
+
+motionLibrary.seek(2.0); // 秒；倒退与重新定位应得到同一结果
+
+const state = motionLibrary.getState();
+
+</code></pre>
+<p>可编辑字段：<code>title</code>、<code>sub</code>、<code>accent</code>、<code>textScale</code>、<code>frost</code>、<code>lens</code>。其中内部多个子卡标签、数据值与坐标目前属于场景代码里的示例常量，<strong>不是所有内容都已暴露为参数</strong>；用于项目时必须按文稿和实际数据改代码，或扩展组件 props。</p>
+<p>嵌入链接示例：<code>index.html?embed=1&amp;scene=18&amp;theme=blue&amp;t=2</code>。纯画布隐藏控制面板，固定时间便于取帧。媒体鱼眼 17 支持本地图片/视频；视频素材是播放媒体，逐帧导出前需额外把媒体 currentTime 与场景时间同步。</p>
+<h2>Remotion 接入</h2>
+<p>用 <code>useCurrentFrame()</code> / fps 算当前秒数，把逐帧逻辑迁入 React 组件；不能用 requestAnimationFrame 的墙钟推进离线渲染。素材使用 Remotion 对应视频/音频组件并绑定源起点；字体在开始渲染前加载。</p>
+<p>已有独立参考工程：<a href="https://github.com/cooperchx/remotion-fisheye-media-effect">素材鱼眼</a>、<a href="https://github.com/cooperchx/remotion-finance-card-tour">原财务卡巡游</a>。第二个是早期参考复刻，并未自动同步本库后来的“知识文案＋中心限定畸变”修订。要复用最新样式，以本库 18 为准。</p>
+<p>本仓库提供浏览器实现及移植规则，没有声称所有 30 个场景已经成为已验收的 Remotion 包。独立参考工程保留自己的许可与运行命令。</p>
+<h2>ChatCut 接入</h2>
+<p>使用时读取已安装 ChatCut 插件的当前基础、Motion Graphics、口播剪辑与验证技能；先检查当前项目、时间线、字体、资产和工具 schema。不要硬编码旧项目 ID，也不要从本 Skill 猜测当前插件参数。</p>
+<p>- 创建新时间线或副本，保留原剪辑；按用户授权范围选择替换。</p>
+<p>- 包装代码可转为帧驱动 JSX；必要素材和字幕分轨。浏览器 CSS 的支持程度必须在当前渲染器实测。</p>
+<p>- 特别检查 <code>backdrop-filter</code>、SVG filter、阴影、perspective、嵌套 3D 与图层顺序。旧版 ChatCut 导出无法用 backdrop-filter 直接采样背景；当前版本仍需验证，不能依赖浏览器结果推断。</p>
+<p>- 真玻璃受限时使用半透填色、薄边、柔影和独立柔化背景的风格化材质，明确降级；人后效果受限时改成不挡人的邻近卡片，不能把静态抠像装成动态跟踪。</p>
+<p>- 先验证短片的入场、稳定态、退场，再批量应用；完整播放与实际导出分别验收。</p>
+<h2>数据、蒙版和鱼眼约束</h2>
+<p>数据 09、25–30 的当前数值都是演示。液体先按圆面积反解高度；曲线使用真实序列、单位和时间轴；计数与形状同步，不能只改显示数字。</p>
+<p>人像、蒙版、背景采用同一源时刻、裁切、缩放、帧率。每次剪切和变速后重算映射，检查头发、肩部、手部边缘。</p>
+<p>巡游 18 的内容层使用 SVG displacement，中心半径内位移平滑归零，外框和阴影独立绘制。不要对整张卡做统一 lens warp，也不要对两套主题分别写出不同的变形边界。素材鱼眼 17 是 WebGL 像素采样，应检查目标浏览器 GPU/软件渲染支持。</p></main></html>

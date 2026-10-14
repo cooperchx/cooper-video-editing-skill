@@ -1,0 +1,46 @@
+{
+  "themes": 2,
+  "scenes": 30,
+  "errors": [],
+  "checks": [
+    "60 theme-scene combinations at entry, hold and late frames",
+    "12 seek comparisons; exact DOM state; raster tolerance <0.1% significant pixels and <0.15 mean channel error",
+    "font loads",
+    "liquid/ring/aggregate final values",
+    "editable text",
+    "mobile viewport no horizontal overflow",
+    "documentation contains 63 GIF examples"
+  ],
+  "rasterToleranceCases": [
+    {
+      "theme": "blue",
+      "id": 18,
+      "changedRatio": 0.00006358396636782203,
+      "meanChannelError": 0.0010416549784375549
+    },
+    {
+      "theme": "blue",
+      "id": 25,
+      "changedRatio": 0.00005236326642055931,
+      "meanChannelError": 0.0048504592383139524
+    },
+    {
+      "theme": "blue",
+      "id": 30,
+      "changedRatio": 0,
+      "meanChannelError": 0.00004550617200834321
+    },
+    {
+      "theme": "teal",
+      "id": 18,
+      "changedRatio": 0.000035532216499665246,
+      "meanChannelError": 0.0007386960798614618
+    },
+    {
+      "theme": "teal",
+      "id": 30,
+      "changedRatio": 0,
+      "meanChannelError": 0.00010160967174465676
+    }
+  ]
+}
