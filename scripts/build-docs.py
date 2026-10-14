@@ -29,7 +29,7 @@ tail='''
 - [验证记录与实际能力边界](references/validation.md)
 - [组件数据](assets/components.json) · [设计参数](assets/tokens.json) · [许可与素材范围](NOTICE.md)
 
-本版包含 30 个浏览器场景、60 个双主题动效 GIF、3 个字体 GIF。匿名人物、虚构界面与代码纹理用于展示版式；连续口播、动态抠像、音轨与最终 MP4 仍需接入项目。新增的三类候选效果尚未实现，不算在 30 项之内。
+本版包含 30 个浏览器场景、60 个双主题动效 GIF、1 个得意黑字体 GIF。匿名人物、虚构界面与代码纹理用于展示版式；连续口播、动态抠像、音轨与最终 MP4 仍需接入项目。新增的三类候选效果尚未实现，不算在 30 项之内。
 '''
 body=core+'\n'+'\n'.join(sections)+tail
 (ROOT/'SKILL.md').write_text(front+body)
@@ -74,8 +74,9 @@ def hrefs(s,base=''):
   return 'href="'+target+'"'
  s=re.sub(r'href="([^"]+)"',swap,s)
  s=re.sub(r'src="(?:\.\./)?docs/', 'src="',s)
+ s=re.sub(r'(src="[^"]+\.gif)"',r'\1?v=smiley-1"',s)
  return s
-style='''body{max-width:1160px;margin:auto;padding:32px 24px 80px;background:#f4f3ee;color:#132b59;font:16px/1.8 system-ui,sans-serif}a{color:#294acb;text-underline-offset:3px}h1{font-size:40px;line-height:1.25}h2{margin-top:64px;border-top:1px solid #bdcdf6;padding-top:28px}h3{margin-top:40px}p{max-width:1040px}img{display:block;width:100%;height:auto;border-radius:8px}table{width:100%;border-collapse:collapse;table-layout:fixed}td{vertical-align:top;padding:12px;border:1px solid #c8d1e2;overflow-wrap:anywhere}.table-wrap{overflow:auto}code{font:14px ui-monospace,monospace;background:#e8ebf1;padding:2px 5px}pre{padding:18px;overflow:auto;background:#e8ebf1;border-radius:8px}nav{position:sticky;top:0;background:#f4f3eef2;padding:12px 0;backdrop-filter:blur(10px)}@media(max-width:650px){body{padding:16px}h1{font-size:30px}td{padding:4px;font-size:12px}}'''
+style='''@font-face{font-family:SmileySans;src:url(assets/fonts/SmileySans-Oblique.ttf.woff2) format('woff2');font-weight:400;font-style:normal}body{max-width:1160px;margin:auto;padding:32px 24px 80px;background:#f4f3ee;color:#132b59;font-synthesis:none;font:16px/1.8 SmileySans,sans-serif}a{color:#294acb;text-underline-offset:3px}h1{font-size:40px;line-height:1.25}h2{margin-top:64px;border-top:1px solid #bdcdf6;padding-top:28px}h3{margin-top:40px}p{max-width:1040px}img{display:block;width:100%;height:auto;border-radius:8px}table{width:100%;border-collapse:collapse;table-layout:fixed}td{vertical-align:top;padding:12px;border:1px solid #c8d1e2;overflow-wrap:anywhere}.table-wrap{overflow:auto}code{font:14px ui-monospace,monospace;background:#e8ebf1;padding:2px 5px}pre{padding:18px;overflow:auto;background:#e8ebf1;border-radius:8px}nav{position:sticky;top:0;background:#f4f3eef2;padding:12px 0;backdrop-filter:blur(10px)}@media(max-width:650px){body{padding:16px}h1{font-size:30px}td{padding:4px;font-size:12px}}'''
 def page(title,content):return '<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+title+'</title><style>'+style+'</style><nav><a href="index.html">交互动效</a> · <a href="guide.html">完整 Skill 图鉴</a> · <a href="https://github.com/cooperchx/cooper-video-editing-skill">GitHub</a></nav><main>'+hrefs(markdown(content))+'</main></html>'
 (ROOT/'docs/guide.html').write_text(page('Cooper · 完整剪辑 Skill 与 GIF 图鉴',body))
 for f in (ROOT/'references').glob('*.md'):

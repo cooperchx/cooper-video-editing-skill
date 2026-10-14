@@ -1,23 +1,13 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>typography</title><style>body{max-width:1160px;margin:auto;padding:32px 24px 80px;background:#f4f3ee;color:#132b59;font:16px/1.8 system-ui,sans-serif}a{color:#294acb;text-underline-offset:3px}h1{font-size:40px;line-height:1.25}h2{margin-top:64px;border-top:1px solid #bdcdf6;padding-top:28px}h3{margin-top:40px}p{max-width:1040px}img{display:block;width:100%;height:auto;border-radius:8px}table{width:100%;border-collapse:collapse;table-layout:fixed}td{vertical-align:top;padding:12px;border:1px solid #c8d1e2;overflow-wrap:anywhere}.table-wrap{overflow:auto}code{font:14px ui-monospace,monospace;background:#e8ebf1;padding:2px 5px}pre{padding:18px;overflow:auto;background:#e8ebf1;border-radius:8px}nav{position:sticky;top:0;background:#f4f3eef2;padding:12px 0;backdrop-filter:blur(10px)}@media(max-width:650px){body{padding:16px}h1{font-size:30px}td{padding:4px;font-size:12px}}</style><nav><a href="index.html">交互动效</a> · <a href="guide.html">完整 Skill 图鉴</a> · <a href="https://github.com/cooperchx/cooper-video-editing-skill">GitHub</a></nav><main><h1>字体角色、来源与接入</h1>
-<h2>不能合并成一个“同款字体”的四种状态</h2>
-<div class="table-wrap"><table>
-<tr><td>角色</td><td>当前识别与状态</td><td>复用要求</td></tr>
-<tr><td>一级厚重标题参考</td><td>用户图中含「厚重的 Heavy 1987」，具体字体未核实</td><td>以原图字形为参考，先确认字库名称与文件，不能猜名字后标为同款</td></tr>
-<tr><td>已认可卡片外观</td><td>Aa研宋，文件内家族 AaYS Regular</td><td>商业字库；仓库保留栅格 GIF 样张，不分发字体文件或字形全集</td></tr>
-<tr><td>二级标题和字幕偏好</td><td>花仿宋 FlowerFangSong，版本 1.50</td><td>从作者发布渠道取得完整字体并确认授权、缺字和实际渲染；不要用少量网页分包冒充完整字库</td></tr>
-<tr><td>公开网页默认</td><td>Noto Serif SC</td><td>开源替代，随仓库附 SIL OFL 1.1；不是研宋或花仿宋</td></tr>
-</table></div>
-<h3>Aa研宋：当前卡片外观参考</h3>
-<p><img loading="lazy" alt="Aa研宋字体动态样张" src="assets/gifs/font-yansong.gif"></p>
-<p>笔画较有重量，适合短标题、数字和卡片强调。来源记录指向 <a href="https://www.17font.com/font/detail/cfa8a530b64811ed8a8467619fd45aaa.html">Aa研宋产品页</a>。某个公开代码仓库里存在字体文件并不自动授予再分发权。本仓库不提供商业字库下载，不把示例字形转成任意文字的可提取字形集。</p>
-<h3>花仿宋：用户指定二级标题与字幕</h3>
-<p><img loading="lazy" alt="花仿宋字体动态样张" src="assets/gifs/font-flower.gif"></p>
-<p>字形修长、宋体衬线明显、带自身倾斜风格。小尺寸细笔画需在平台压缩后检查，不以增加粗黑描边补救。作者发布页将其标为免费商用，见 <a href="https://www.maoken.com/freefonts/12311.html">猫啃网花仿宋说明</a> 与 <a href="https://fonts.zeoseven.com/items/12/">字体分发信息</a>。使用者应按取得版本随附的许可使用；本库只保留有限文字的渲染样张。</p>
-<h3>Noto Serif SC：公开可运行替代</h3>
-<p><img loading="lazy" alt="Noto Serif SC动态样张" src="assets/gifs/font-noto.gif"></p>
-<p><a href="https://github.com/google/fonts/tree/main/ofl/notoserifsc">Google Fonts 官方源码</a>，<a href="https://github.com/cooperchx/cooper-video-editing-skill/blob/main/assets/fonts/OFL.txt">本库 OFL 许可</a>。中文宋体骨架、字形覆盖广，便于其他 Agent 离线复用。示例中的字号与换行已经用此字体重新检查，但不同字体的度量不完全相同。</p>
-<h2>加载实际字体</h2>
-<p>网页顶部「加载获授权的本地字体」接受 TTF/OTF/WOFF/WOFF2，仅在浏览器本地加载，不上传、不永久保存；刷新恢复默认字体。当前入口替换场景字体，用来观察整体度量，不是完整的多角色字体管理器。正式制作中应分别配置 heading/body/caption 字体。</p>
-<p>CSS 中 <code>YanSong</code> 是历史兼容别名，公开仓库指向 <strong>Noto Serif SC</strong>，不代表装入了研宋。更换时同时处理别名以及 SVG、Canvas 中显式的字体设置。通过 <code>document.fonts.load()</code> / <code>document.fonts.ready</code> 等待加载，再测量与渲染。</p>
-<p>ChatCut、Remotion、浏览器是不同字体环境：先查询当前可用字体和加载方式。固定标题可由已授权字体转有限字形路径；修改文字需重新生成路径。动态字幕必须保证完整字库覆盖，不能复用旧标题轮廓假装支持任意换字。</p>
-<p>样张 GIF 是有限文案的外观演示，不是字体文件，也不是字体授权证书。</p></main></html>
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>typography</title><style>@font-face{font-family:SmileySans;src:url(assets/fonts/SmileySans-Oblique.ttf.woff2) format('woff2');font-weight:400;font-style:normal}body{max-width:1160px;margin:auto;padding:32px 24px 80px;background:#f4f3ee;color:#132b59;font-synthesis:none;font:16px/1.8 SmileySans,sans-serif}a{color:#294acb;text-underline-offset:3px}h1{font-size:40px;line-height:1.25}h2{margin-top:64px;border-top:1px solid #bdcdf6;padding-top:28px}h3{margin-top:40px}p{max-width:1040px}img{display:block;width:100%;height:auto;border-radius:8px}table{width:100%;border-collapse:collapse;table-layout:fixed}td{vertical-align:top;padding:12px;border:1px solid #c8d1e2;overflow-wrap:anywhere}.table-wrap{overflow:auto}code{font:14px ui-monospace,monospace;background:#e8ebf1;padding:2px 5px}pre{padding:18px;overflow:auto;background:#e8ebf1;border-radius:8px}nav{position:sticky;top:0;background:#f4f3eef2;padding:12px 0;backdrop-filter:blur(10px)}@media(max-width:650px){body{padding:16px}h1{font-size:30px}td{padding:4px;font-size:12px}}</style><nav><a href="index.html">交互动效</a> · <a href="guide.html">完整 Skill 图鉴</a> · <a href="https://github.com/cooperchx/cooper-video-editing-skill">GitHub</a></nav><main><h1>当前字体规范：全部使用得意黑</h1>
+<p>用户最新决定覆盖早期字体方案：<strong>一级标题、二级标题、正文、字幕、卡片、花字、图表数字、SVG 标签和匿名示意素材文字，统一为得意黑 Smiley Sans。</strong> 当前页面不再混用研宋、花仿宋或 Noto Serif SC。</p>
+<p><img loading="lazy" alt="得意黑动态样张" src="assets/gifs/font-smiley.gif?v=smiley-1"></p>
+<h2>来源与许可</h2>
+<p>官方：<a href="https://github.com/atelier-anchor/smiley-sans">atelier-anchor/smiley-sans</a>，版本 <a href="https://github.com/atelier-anchor/smiley-sans/releases/tag/v2.0.1">v2.0.1</a>。字体采用 SIL OFL 1.1；完整许可保存在 <a href="https://github.com/cooperchx/cooper-video-editing-skill/blob/main/assets/fonts/OFL.txt">OFL.txt</a>。仓库包含未修改的 <code>SmileySans-Oblique.ttf</code> 和网页用 <code>SmileySans-Oblique.ttf.woff2</code>。</p>
+<h2>排版要求</h2>
+<p>得意黑字身窄而斜，中文和数字有明确的黑体重量。保留字体本身造型，不额外伪斜、伪粗或强行拉伸。标题与字幕的层级通过字号、颜色、位置、间距和停留时间区分。</p>
+<p>提问卡文字先几何居中，再考虑倾斜字形做视觉检查。标题不溢出卡片，数字和单位不互相挤压，字幕按语义换行；保持已确认的轻柔阴影与底部安全区。</p>
+<p>字体覆盖不等于任意语言全覆盖：更换具体文案后检查中文、字母、数字、箭头、特殊标点及缺字。缺字时说明情况，不悄悄恢复旧宋体。口播中很长的正文先拆句或分卡，不靠压缩字形解决。</p>
+<h2>实现</h2>
+<p>网页的 CSS 家族名为 <code>SmileySans</code>，加载本仓库 WOFF2。DOM、SVG 和字体简写均使用同一家族；素材中的文字也通过同一字体重新绘制。等待 <code>document.fonts.ready</code> 后再测量和取帧。</p>
+<p>网页顶部仍可加载获授权的本地字体作临时比较；文件不上传，刷新恢复得意黑。正式项目中所有文字角色应保持得意黑，除非用户后来明确修改。</p>
+<p>ChatCut、Remotion、浏览器的字体环境各自独立。接入时核实文件加载或可用字体标识，不能仅在配置里写下名称就宣称换字成功；实际检查标题、字幕和 SVG 数字的输出字形。</p></main></html>

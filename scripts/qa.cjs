@@ -5,10 +5,11 @@ const {chromium}=require('playwright');const fs=require('fs'),path=require('path
  try{
   const page=await browser.newPage({viewport:{width:1280,height:1000}});page.on('pageerror',e=>report.errors.push(e.message));
   await page.goto(process.env.PREVIEW_URL||'file://'+path.join(root,'docs/index.html'));await page.evaluate(()=>motionLibrary.ready);
-  assert.equal(await page.evaluate(()=>document.fonts.check('40px YanSong','动画风格')),true);
+  assert.equal(await page.evaluate(()=>document.fonts.check('40px SmileySans','动画风格')),true);
   for(const theme of ['blue','teal'])for(let id=1;id<=30;id++){
    await page.evaluate(({id,theme})=>{motionLibrary.setTheme(theme);motionLibrary.select(id,{autoplay:false});motionLibrary.seek(2)},{id,theme});
    const state=await page.evaluate(()=>motionLibrary.getState());assert.equal(state.scene,id);assert.equal(state.palette,theme);
+   const wrongFonts=await page.evaluate(()=>[...document.querySelectorAll('#scene-root *')].filter(e=>e.children.length===0&&e.textContent.trim()&&!['STYLE','SCRIPT'].includes(e.tagName)).filter(e=>!getComputedStyle(e).fontFamily.includes('SmileySans')).map(e=>({tag:e.tagName,text:e.textContent.slice(0,30),font:getComputedStyle(e).fontFamily})));assert.deepEqual(wrongFonts,[],`Unexpected font ${theme}/${id}`);
    for(const t of [0,2,4.5])await page.evaluate(t=>motionLibrary.seek(t),t);
    if([2,8,18,24,25,30].includes(id)){
     await page.evaluate(()=>motionLibrary.seek(2));await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));const domA=await page.locator('#scene-root').innerHTML();const a=await page.locator('#viewer').screenshot();await page.evaluate(()=>{motionLibrary.seek(.3);motionLibrary.seek(2)});await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));assert.equal(await page.locator('#scene-root').innerHTML(),domA,`DOM state differs ${theme}/${id}`);const b=await page.locator('#viewer').screenshot();if(!a.equals(b)){
@@ -17,7 +18,7 @@ const {chromium}=require('playwright');const fs=require('fs'),path=require('path
     }
    }
   }
-  report.checks.push('60 theme-scene combinations at entry, hold and late frames','12 seek comparisons; exact DOM state; raster tolerance <0.1% significant pixels and <0.15 mean channel error','font loads');
+  report.checks.push('60 theme-scene combinations at entry, hold and late frames','12 seek comparisons; exact DOM state; raster tolerance <0.1% significant pixels and <0.15 mean channel error','Smiley Sans loads and every scene text element uses it');
   for(const [id,selector,value] of [[25,'#liquid-value','72%'],[26,'#ring-value','78%'],[30,'#aggregate-value','50']]){
    await page.evaluate(id=>{motionLibrary.select(id,{autoplay:false});motionLibrary.seek(5)},id);assert.equal(await page.locator(selector).textContent(),value);
   }
@@ -25,7 +26,7 @@ const {chromium}=require('playwright');const fs=require('fs'),path=require('path
   await page.evaluate(()=>{motionLibrary.select(2,{autoplay:false});motionLibrary.configure({title:'测试标题',sub:'可编辑说明'});motionLibrary.seek(2)});assert((await page.locator('#scene-root').innerText()).includes('测试标题'));report.checks.push('editable text');
   await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));report.checks.push('mobile viewport no horizontal overflow');
   await page.goto((process.env.PREVIEW_URL||'file://'+path.join(root,'docs/index.html')).replace(/index.html.*$/,'guide.html'));
-  await page.waitForLoadState('load');assert.equal(await page.locator('img').count(),63);report.checks.push('documentation contains 63 GIF examples');
+  await page.waitForLoadState('load');assert.equal(await page.locator('img').count(),61);report.checks.push('documentation contains 61 GIF examples');
   assert.equal(report.errors.length,0,report.errors.join('\n'));
  }finally{await browser.close();fs.writeFileSync(path.join(root,'assets/browser-qa.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));}
 })().catch(e=>{console.error(e);process.exitCode=1});

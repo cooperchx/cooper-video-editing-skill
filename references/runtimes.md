@@ -25,7 +25,7 @@ npm test
 node scripts/render-gifs.cjs --themes=blue --ids=2,8,18,24 --width=640 --fps=10
 ```
 
-执行后写入 `docs/assets/gifs/`，渲染记录写入 `assets/gif-render-report.json`。字体样张涉及单独授权文件，不能仅靠仓库中的开源替代自动重建商业字体样张。
+执行后写入 `docs/assets/gifs/`，渲染记录写入 `assets/gif-render-report.json`。当前得意黑样张可直接使用仓库内字体通过 scripts/render-font.cjs 重建。
 
 ## 浏览器逐帧接口
 

@@ -2,8 +2,8 @@
 
 原创 Skill 文档、设计参数与本仓库原创代码按根目录 MIT 许可复用。字体与示意素材的具体许可范围如下：
 
-- `docs/assets/fonts/NotoSerifSC.ttf`：Google Fonts / Noto Serif SC，SIL OFL 1.1，见同目录 `OFL.txt`。公开演示的兼容字体名 `YanSong` 实际指向此开源字体。
-- Aa研宋、花仿宋：仅提供有限文字的栅格 GIF 样张作为字体比较与教学说明；未捆绑商业字库、网页分包或字形全集。字体获取与授权见 `references/typography.md`。
+- `docs/assets/fonts/SmileySans-Oblique.ttf` 与 `.ttf.woff2`：得意黑 Smiley Sans，atelierAnchor，SIL OFL 1.1，见同目录 `OFL.txt`。字体未修改，网页使用 WOFF2；可在许可范围内复用。
+- 当前所有包装文字使用得意黑；早期研宋、花仿宋和 Noto Serif SC 不再随当前版本展示。详情见 `references/typography.md`。
 - `docs/assets/media/`：本仓库原创代码绘制的匿名讲述者、虚构界面和纹理插画，随原创代码按 MIT 许可复用；对应 GIF 已重新渲染。公开仓库不包含用户的照片、录屏、原素材帧或从私人视频提取的人像轮廓。正式项目请替换成你有权使用的素材。
 - `font-*.gif` 是渲染样张，不是字体授权或字体下载文件。普通场景 GIF 是代码输出的低分辨率演示，不承诺视频导出与浏览器逐像素一致。
 - 链接到的独立 Remotion 工程各自保留其仓库的许可、素材要求和实现状态，不自动纳入本库 MIT 授权。

@@ -1,0 +1,23 @@
+{
+  "family": "Smiley Sans Oblique",
+  "version": "2.0.1",
+  "source": "https://github.com/atelier-anchor/smiley-sans/releases/tag/v2.0.1",
+  "license": "SIL OFL 1.1",
+  "files": [
+    {
+      "file": "SmileySans-Oblique.ttf",
+      "sha256": "b447d7e781f08bc95c4c9f23ba71ed2b8ebb639aa7184485c71c4ca5afcd25c4",
+      "bytes": 2629764
+    },
+    {
+      "file": "SmileySans-Oblique.ttf.woff2",
+      "sha256": "731f22973349404b15a88a99ef3b5dd4104c0965c23b7e485c1f11e84fea99e2",
+      "bytes": 1150924
+    },
+    {
+      "file": "OFL.txt",
+      "sha256": "810d3a1b1bf4eae5cb9e5750dc7fb65791b97ca0b0803d0cbf972e54353e2d15",
+      "bytes": 4421
+    }
+  ]
+}

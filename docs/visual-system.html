@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>visual-system</title><style>body{max-width:1160px;margin:auto;padding:32px 24px 80px;background:#f4f3ee;color:#132b59;font:16px/1.8 system-ui,sans-serif}a{color:#294acb;text-underline-offset:3px}h1{font-size:40px;line-height:1.25}h2{margin-top:64px;border-top:1px solid #bdcdf6;padding-top:28px}h3{margin-top:40px}p{max-width:1040px}img{display:block;width:100%;height:auto;border-radius:8px}table{width:100%;border-collapse:collapse;table-layout:fixed}td{vertical-align:top;padding:12px;border:1px solid #c8d1e2;overflow-wrap:anywhere}.table-wrap{overflow:auto}code{font:14px ui-monospace,monospace;background:#e8ebf1;padding:2px 5px}pre{padding:18px;overflow:auto;background:#e8ebf1;border-radius:8px}nav{position:sticky;top:0;background:#f4f3eef2;padding:12px 0;backdrop-filter:blur(10px)}@media(max-width:650px){body{padding:16px}h1{font-size:30px}td{padding:4px;font-size:12px}}</style><nav><a href="index.html">交互动效</a> · <a href="guide.html">完整 Skill 图鉴</a> · <a href="https://github.com/cooperchx/cooper-video-editing-skill">GitHub</a></nav><main><h1>视觉系统与已确认的边界</h1>
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>visual-system</title><style>@font-face{font-family:SmileySans;src:url(assets/fonts/SmileySans-Oblique.ttf.woff2) format('woff2');font-weight:400;font-style:normal}body{max-width:1160px;margin:auto;padding:32px 24px 80px;background:#f4f3ee;color:#132b59;font-synthesis:none;font:16px/1.8 SmileySans,sans-serif}a{color:#294acb;text-underline-offset:3px}h1{font-size:40px;line-height:1.25}h2{margin-top:64px;border-top:1px solid #bdcdf6;padding-top:28px}h3{margin-top:40px}p{max-width:1040px}img{display:block;width:100%;height:auto;border-radius:8px}table{width:100%;border-collapse:collapse;table-layout:fixed}td{vertical-align:top;padding:12px;border:1px solid #c8d1e2;overflow-wrap:anywhere}.table-wrap{overflow:auto}code{font:14px ui-monospace,monospace;background:#e8ebf1;padding:2px 5px}pre{padding:18px;overflow:auto;background:#e8ebf1;border-radius:8px}nav{position:sticky;top:0;background:#f4f3eef2;padding:12px 0;backdrop-filter:blur(10px)}@media(max-width:650px){body{padding:16px}h1{font-size:30px}td{padding:4px;font-size:12px}}</style><nav><a href="index.html">交互动效</a> · <a href="guide.html">完整 Skill 图鉴</a> · <a href="https://github.com/cooperchx/cooper-video-editing-skill">GitHub</a></nav><main><h1>视觉系统与已确认的边界</h1>
 <h2>视觉优先级</h2>
 <p>用户最新修订 &gt; 已认可的两类人后卡与参考图片 &gt; 本库的示例实现 &gt; 早期 Vox 风格预设。Vox Editorial Explainer 是早期探索，不作为覆盖当前蓝白设计的默认模板。以内容解释、清晰层级和真实素材为主，不使用科技蓝霓虹和强模板感。</p>
 <h2>两套颜色</h2>
@@ -11,10 +11,11 @@
 </table></div>
 <p>主题切换涉及背景、文字、边缘、图形、玻璃、阴影与选中条；不改变人物肤色或 B-roll 原素材。代码兼容键 <code>teal</code> 指的是最新正绿，不是早期青绿。参数见 <a href="https://github.com/cooperchx/cooper-video-editing-skill/blob/main/assets/tokens.json">tokens.json</a>。</p>
 <h2>字体与层级</h2>
-<p>- 主标题：优先参照用户提供的厚重中文字体图，<strong>准确名称尚未核实</strong>；图片中的 Heavy 1987 不能直接当成已确认的字体名。当前卡片认可外观为研宋，保留其样式参考。</p>
-<p>- 二级标题与字幕：用户指定花仿宋，细长宋体、笔画对比明显。它不是普通黑体，不可偷偷替换后称“同款”。</p>
-<p>- 公开可运行示例：Noto Serif SC，使用 OFL 字库，明确属于替代。真实项目可接入获授权文件。参考 <a href="https://github.com/cooperchx/cooper-video-editing-skill/blob/main/typography.md">字体说明与 GIF</a>。</p>
-<p>- 不对已经倾斜的字形重复加斜，不盲目伪粗；英文字母、数字、箭头、中文标点分别检查缺字与基线。</p>
+<p>- 当前所有标题、正文、字幕、花字、卡片、数字、SVG 标签统一用 <strong>得意黑 Smiley Sans</strong>，覆盖早期宋体选择。</p>
+<p>- 通过字号、色彩、留白、位置与运动建立层级，不靠多字体混搭。</p>
+<p>- 得意黑字身窄而有倾斜特征；不额外斜切、不使用伪粗。英文、数字、箭头与标点单独检查覆盖。</p>
+<p>- 替换字体后重新测量文本，保持提问卡视觉居中，防止标题溢出、字幕换行和卡片内容相互挤压。</p>
+<p>- 仓库附桌面 TTF、网页 WOFF2 与 OFL 许可，见 <a href="https://github.com/cooperchx/cooper-video-editing-skill/blob/main/typography.md">字体说明与 GIF</a>。</p>
 <h2>形状与材质</h2>
 <p>1. 人后编辑卡：米白圆角矩形、蓝色编辑选择框、控制点、浅蓝选中条、指针。卡片紧凑，数字和副标题有视觉重量，避免大块空白。</p>
 <p>2. 提问卡：圆角外轮廓仍能辨认，边缘轻羽化；内部椭圆是<strong>有完整中心的渐变色块</strong>。文字几何居中后再做视觉校正。蓝绿两版都没有空心洞。</p>

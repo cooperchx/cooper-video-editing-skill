@@ -24,7 +24,7 @@ for c in components:
   r=subprocess.run(['ffprobe','-v','error','-count_frames','-select_streams','v:0','-show_entries','stream=nb_read_frames,width,height','-of','json',str(p)],capture_output=True,text=True,check=True)
   s=json.loads(r.stdout)['streams'][0]
   if int(s['nb_read_frames'])<20 or s['width']!=640 or s['height']!=360:errors.append(f'Invalid animation {p.name}')
-for name in ['font-yansong.gif','font-flower.gif','font-noto.gif']:
+for name in ['font-smiley.gif']:
  p=ROOT/'docs/assets/gifs'/name
  if not p.exists():errors.append(f'Missing {name}')
 media=ROOT/'docs/assets/media'
@@ -35,7 +35,7 @@ if provenance.exists():
  for item in json.loads(provenance.read_text())['files']:
   if hashlib.sha256((ROOT/item['path']).read_bytes()).hexdigest()!=item['sha256']:errors.append('Media provenance mismatch: '+item['path'])
 else:errors.append('Missing anonymous media provenance')
-font=ROOT/'docs/assets/fonts/NotoSerifSC.ttf'
+font=ROOT/'docs/assets/fonts/SmileySans-Oblique.ttf'
 if font.stat().st_size<1_000_000:errors.append('Font unexpectedly small or incomplete')
-print(json.dumps({'components':len(components),'sceneGifs':60,'fontGifs':3,'errors':errors},ensure_ascii=False,indent=2))
+print(json.dumps({'components':len(components),'sceneGifs':60,'fontGifs':1,'errors':errors},ensure_ascii=False,indent=2))
 raise SystemExit(bool(errors))

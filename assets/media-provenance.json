@@ -3,49 +3,49 @@
   "files": [
     {
       "path": "docs/assets/media/oil.png",
-      "sha256": "e8d5726709e9415c348a1bf9bb4e08d94d6ee43ad286d5f1ddd63b73aaf2ec46",
+      "sha256": "2662bfb6a40fc25ebed53e97cfc129eeed57ce035a8ce48970195909672fcd00",
       "origin": "Original code-drawn synthetic illustration",
       "source": "scripts/build-placeholders.cjs"
     },
     {
       "path": "docs/assets/media/oil.svg",
-      "sha256": "9a2734602c5dba3a53a331853ec7ddb81d070ec5c5e421795e00cad813e702bb",
+      "sha256": "683fdf096689e17ac6c3c4fb453f0b0092fb429bdc2fe007c5e74e6b548cd9cc",
       "origin": "Original code-drawn synthetic illustration",
       "source": "scripts/build-placeholders.cjs"
     },
     {
       "path": "docs/assets/media/person.png",
-      "sha256": "efa8c7e254f1035ff0dfca56111d3af9fca5ee6b3527e27672e2a43392ee1453",
+      "sha256": "012ebe7605042fc1c2fd33ccd616e04671fd7e4efad8a29901649d611a0490d5",
       "origin": "Original code-drawn synthetic illustration",
       "source": "scripts/build-placeholders.cjs"
     },
     {
       "path": "docs/assets/media/person.svg",
-      "sha256": "0ba141ea00159241e5a6a29fd24ceee02d8ccad73629456166a7abfb05e403af",
+      "sha256": "5b93db33d11c641bb3f388c3d8cd302e4f9a290103ea5e25fada7f124d407020",
       "origin": "Original code-drawn synthetic illustration",
       "source": "scripts/build-placeholders.cjs"
     },
     {
       "path": "docs/assets/media/screen.png",
-      "sha256": "7bb4b4a6977047d210f8e027d35f9ba6e34b6097b190e841fc46dbb0eabcaf92",
+      "sha256": "dc544fcf3f38e61aa25636bcdb121ca2ffdde54ca8665de585a2ca77948ec4c5",
       "origin": "Original code-drawn synthetic illustration",
       "source": "scripts/build-placeholders.cjs"
     },
     {
       "path": "docs/assets/media/screen.svg",
-      "sha256": "c10d5876fc5f7e4d1bb23861fbe844f23928d254f0af16779c90751540271413",
+      "sha256": "a8af132370316ddf61ef7d0717a549843f552c4ff8df5f0764af400aa6855888",
       "origin": "Original code-drawn synthetic illustration",
       "source": "scripts/build-placeholders.cjs"
     },
     {
       "path": "docs/assets/media/wool.png",
-      "sha256": "2f20f413d913aff31f57ef6fc5d69359e816cdf0eafdf5f6d76d2e5064979950",
+      "sha256": "98ea8b0d845100ea459ad967d6eba096a7f4a67f6bf30271ed4d027073ae5c4d",
       "origin": "Original code-drawn synthetic illustration",
       "source": "scripts/build-placeholders.cjs"
     },
     {
       "path": "docs/assets/media/wool.svg",
-      "sha256": "9a3be7800a2fd8b396aac20120faf5aa5eb071f49ce3a5265ac0a700021fc714",
+      "sha256": "969adce2b23a70d699055a6967b099cf27e54d8097dd2d06e1533553628d46eb",
       "origin": "Original code-drawn synthetic illustration",
       "source": "scripts/build-placeholders.cjs"
     }

@@ -1,6 +1,6 @@
 {
   "name": "cooper-video-editing-skill",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "Reusable Chinese talking-head editing system and 30 deterministic motion examples",
   "scripts": {
